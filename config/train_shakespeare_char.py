@@ -1,32 +1,36 @@
-out_dir = "out-shakespeare-char"
-eval_interval = 4000
-eval_iters = 100
-# I'm not sure what's going on, but when log_interval == 100, the time per iter is inaccurate and much longer than it should be
-# when running on multiple GPUs. TODO: investigate
-log_interval = 50  # don't print too too often
+# train a miniature character-level shakespeare model
+# good for debugging and playing on macbooks and such
 
-always_save_checkpoint = True
+out_dir = 'out-chess-mps'
+eval_interval = 250 # keep frequent because we'll overfit
+eval_iters = 50
+log_interval = 10 # don't print too too often
 
-wandb_log = False
-wandb_project = "chess-gpt-batch"
-wandb_run_name = "8layer_lichess"
+# we expect to overfit on this small dataset, so only save when val improves
+always_save_checkpoint = False
 
-dataset = "lichess_hf_dataset"
-gradient_accumulation_steps = 1
-batch_size = 100
-block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
+wandb_log = False # set to True if you want to log to wandb
+wandb_project = 'chess-gpt'
 
-# baby GPT model :)
-n_layer = 8
-n_head = 8
-n_embd = 512
+dataset = 'lichess_hf_dataset'
+gradient_accumulation_steps = 4
+batch_size = 1
+block_size = 128 # reduced context size for faster training
+
+# lighter model for Macbook training
+n_layer = 4
+n_head = 4
+n_embd = 128
 dropout = 0.0
 
-learning_rate = 3e-4
-max_iters = 600000
-lr_decay_iters = max_iters  # make equal to max_iters usually
-min_lr = 3e-5  # learning_rate / 10 usually
-beta2 = 0.95  # make a bit bigger because number of tokens per iter is small
+learning_rate = 1e-3
+max_iters = 2000
+lr_decay_iters = 2000
+min_lr = 1e-4
+beta2 = 0.95
 
-warmup_iters = 2000  # not super necessary potentially
-compile = True
+warmup_iters = 100
+
+# Mac-specific settings
+device = 'mps'  # use MPS (Metal Performance Shaders)
+compile = False # do not torch compile the model
