@@ -33,6 +33,6 @@ beta2 = 0.95
 warmup_iters = 500
 
 # GPU-specific settings
-device = 'cuda'  # use CUDA
-compile = True   # use PyTorch 2.0 compile for speed
-dtype = 'bfloat16'  # use bfloat16 for efficiency 
+device = 'cuda'
+compile = False
+dtype = 'bfloat16'

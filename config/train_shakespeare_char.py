@@ -29,4 +29,4 @@ min_lr = 3e-5  # learning_rate / 10 usually
 beta2 = 0.95  # make a bit bigger because number of tokens per iter is small
 
 warmup_iters = 2000  # not super necessary potentially
-compile = True
+compile = False
