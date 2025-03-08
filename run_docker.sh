@@ -30,7 +30,7 @@ train_mac() {
   echo "Starting ChessGPT training for Mac..."
   docker run -it --rm \
     -v $(pwd):/app \
-    chessgpt python train.py config/train_shakespeare_char.py
+    chessgpt python train.py config/train_shakespeare_char_mac.py
 }
 
 # Run the sampling script
