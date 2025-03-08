@@ -22,7 +22,7 @@ train() {
   echo "Starting ChessGPT training on GPU..."
   docker run --gpus all -it --rm \
     -v $(pwd):/app \
-    chessgpt python train.py config/train_chess_gpu.py
+    python train.py config/train_shakespeare_char.py
 }
 
 # Run the training script with Mac MPS configuration

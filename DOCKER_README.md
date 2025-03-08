@@ -10,11 +10,11 @@ This README explains how to set up and train ChessGPT using Docker on an RTX4090
 
 ## Step-by-Step Instructions
 
-### 1. Clone the repository (if needed)
+### 1. Clone the repository (and sub-modules) (if needed)
 
 ```bash
-git clone https://github.com/your-username/ChessGPT.git
-cd ChessGPT
+git clone --recursive-submodules https://github.com/your-username/ChessGPT.git
+cd ChessGPT/train_ChessGPT
 ```
 
 ### 2. Make the helper script executable

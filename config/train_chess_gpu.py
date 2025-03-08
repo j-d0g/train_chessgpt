@@ -2,8 +2,8 @@
 # optimizer for GPU training
 
 out_dir = 'out-chess-gpu'
-eval_interval = 500
-eval_iters = 200
+eval_interval = 2000
+eval_iters = 100
 log_interval = 10
 
 # save checkpoints
