@@ -38,7 +38,7 @@ sample() {
   echo "Sampling from ChessGPT model..."
   docker run --gpus all -it --rm \
     -v $(pwd):/app \
-    chessgpt python sample.py --out_dir=out-shakespeare-char
+    chessgpt python sample.py --out_dir=out-shakespeare-char start=";1."
 }
 
 # Prepare the dataset
