@@ -1,4 +1,4 @@
-out_dir = "out-shakespeare-char"
+out_dir = "out-chess-gpu-25"
 eval_interval = 4000
 eval_iters = 100
 # I'm not sure what's going on, but when log_interval == 100, the time per iter is inaccurate and much longer than it should be
@@ -7,7 +7,7 @@ log_interval = 50  # don't print too too often
 
 always_save_checkpoint = True
 
-wandb_log = True
+wandb_log = False
 wandb_project = "chess-gpt-batch"
 wandb_run_name = "8layer_lichess"
 

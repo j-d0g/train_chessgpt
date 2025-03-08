@@ -15,14 +15,14 @@ wandb_run_name = 'chessgpt-rtx4090'
 
 dataset = 'lichess_hf_dataset'
 gradient_accumulation_steps = 1
-batch_size = 32  # with RTX4090 we can use larger batch sizes
+batch_size = 100  # with RTX4090 we can use larger batch sizes
 block_size = 512  # context length
 
 # medium-sized model parameters
 n_layer = 12
 n_head = 12
-n_embd = 768
-dropout = 0.1
+n_embd = 512
+dropout = 0.0
 
 learning_rate = 5e-4
 max_iters = 20000
