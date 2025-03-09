@@ -1,25 +1,25 @@
-out_dir = "out-shakespeare-char"
+out_dir = "out-stockfish-16layer"
 eval_interval = 4000
 eval_iters = 100
-# I'm not sure what's going on, but when log_interval == 100, the time per iter is inaccurate and much longer than it should be
-# when running on multiple GPUs. TODO: investigate
-log_interval = 50  # don't print too too often
+log_interval = 50
+
+# Explicitly set to resume training from existing checkpoint
+init_from = 'resume'
 
 always_save_checkpoint = True
 
 wandb_log = True
-wandb_project = "chess-gpt-batch"
-wandb_run_name = "8layer_lichess"
+wandb_project = "chess-gpt"
+dataset = "hf_dataset_stockfish"
 
-dataset = "lichess_hf_dataset"
-gradient_accumulation_steps = 1
-batch_size = 100
+gradient_accumulation_steps = 3
+batch_size = 32
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
 
-# baby GPT model :)
-n_layer = 8
-n_head = 8
-n_embd = 512
+# 16-layer GPT model
+n_layer = 16
+n_head = 16
+n_embd = 768
 dropout = 0.0
 
 learning_rate = 3e-4
@@ -30,3 +30,5 @@ beta2 = 0.95  # make a bit bigger because number of tokens per iter is small
 
 warmup_iters = 2000  # not super necessary potentially
 compile = False
+
+wandb_run_name = f"layer_{n_layer}_block_{block_size}_batch_{batch_size}_dataset_{dataset}" 
