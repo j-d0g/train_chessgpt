@@ -31,30 +31,52 @@ chmod +x run_docker.sh
 
 ### 4. Prepare the dataset
 
+For lichess dataset:
 ```bash
-./run_docker.sh prepare
+./run_docker.sh prepare_lichess
+```
+
+For stockfish dataset:
+```bash
+./run_docker.sh prepare_stockfish
 ```
 
 ### 5. Start training
 
+For lichess dataset:
 ```bash
-./run_docker.sh train
+./run_docker.sh train_lichess
 ```
 
-Or
+For stockfish dataset:
+```bash
+./run_docker.sh train_stockfish
+```
 
-docker run --gpus device=1 -it -d --rm -e WANDB_API_KEY=afaa09bff
-815a45f013c3e5cc9c962c20c8e3325 -v $(pwd):/app chessgpt pytho
-n train.py config/train_stockfish.py --device=cuda:0
+For Mac users (using MPS):
+```bash
+./run_docker.sh train_mac
+```
 
-docker ps
-
-docker logs -f <container_id>
+You can also add additional training parameters:
+```bash
+./run_docker.sh train_stockfish --batch_size=64
+```
 
 ### 6. Sample from the trained model
 
 ```bash
 ./run_docker.sh sample
+```
+
+For sampling just a single move:
+```bash
+./run_docker.sh sample_move
+```
+
+You can also add parameters:
+```bash
+./run_docker.sh sample --temperature=0.9 --max_new_tokens=100
 ```
 
 ### 7. Open an interactive shell (for debugging or custom commands)
@@ -63,23 +85,41 @@ docker logs -f <container_id>
 ./run_docker.sh shell
 ```
 
+### 8. Monitoring and logging
+
+List all running ChessGPT containers:
+```bash
+./run_docker.sh list
+```
+
+View logs of a specific container:
+```bash
+./run_docker.sh logs CONTAINER_NAME
+```
+
+Attach to a running container:
+```bash
+./run_docker.sh attach CONTAINER_NAME
+```
+
 ## Configuration
 
-The RTX4090 configuration is in `config/train_chess_gpu.py`. You can modify:
+The configuration files are located in the `config/` directory:
+- `train_lichess.py` - Configuration for training on the lichess dataset
+- `train_stockfish.py` - Configuration for training on the stockfish dataset
+- `train_chess_mac.py` - Configuration for training on Mac with MPS
 
+You can modify:
 - Model size parameters (`n_layer`, `n_head`, `n_embd`)
 - Batch size and learning rate
 - Number of training iterations
 
 ## Wandb Integration
 
-By default, training logs to Weights & Biases. To enable this:
-
-1. Inside the Docker container shell, run:
-   ```bash
-   wandb login
-   ```
-2. Enter your API key when prompted
+By default, training logs to Weights & Biases. The script will:
+1. Check for WANDB_API_KEY in the environment variables
+2. Look for a wandb key in the parent directory's `.env` file
+3. Prompt you to enter your API key if not found
 
 To disable Wandb logging, set `wandb_log = False` in the config file.
 
@@ -87,4 +127,6 @@ To disable Wandb logging, set `wandb_log = False` in the config file.
 
 - **GPU not available**: Make sure the NVIDIA Container Toolkit is installed on the host
 - **Out of memory errors**: Reduce batch size or model size in the config file
-- **Permission errors**: Make sure your user has permissions to run Docker 
+- **Permission errors**: Make sure your user has permissions to run Docker
+- **Wandb authentication errors**: Check that your API key is correct
+- **Docker build failures**: Check for network connectivity or disk space issues 
