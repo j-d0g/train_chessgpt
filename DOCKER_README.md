@@ -41,6 +41,16 @@ chmod +x run_docker.sh
 ./run_docker.sh train
 ```
 
+Or
+
+docker run --gpus device=1 -it -d --rm -e WANDB_API_KEY=afaa09bff
+815a45f013c3e5cc9c962c20c8e3325 -v $(pwd):/app chessgpt pytho
+n train.py config/train_stockfish.py --device=cuda:0
+
+docker ps
+
+docker logs -f <container_id>
+
 ### 6. Sample from the trained model
 
 ```bash

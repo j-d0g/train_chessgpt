@@ -5,7 +5,6 @@ log_interval = 50
 
 # Explicitly set to resume training from existing checkpoint
 init_from = 'resume'
-
 always_save_checkpoint = True
 
 wandb_log = True
