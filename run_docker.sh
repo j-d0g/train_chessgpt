@@ -151,6 +151,31 @@ prepare_stockfish() {
     chessgpt python data/hf_dataset_stockfish/prepare.py "$@"
 }
 
+train_distributed() {
+  echo "Starting distributed ChessGPT training on multiple GPUs..."
+  
+  # Check if WANDB_API_KEY is set
+  WANDB_KEY=${WANDB_API_KEY:-}
+  
+  if [ -z "$WANDB_KEY" ] && [ -f "../.env" ]; then
+    # Try to source the parent .env file
+    echo "Looking for wandb key in ../.env file..."
+    source "../.env"
+    WANDB_KEY=${wandb:-}
+  fi
+  
+  if [ -z "$WANDB_KEY" ]; then
+    echo "No WANDB_API_KEY found in environment or .env file."
+    read -p "Enter your Weights & Biases API key: " WANDB_KEY
+  fi
+  
+  # Run with torchrun
+  docker run --gpus all -it --rm \
+    -e WANDB_API_KEY="$WANDB_KEY" \
+    -v $(pwd):/app \
+    chessgpt torchrun --standalone --nproc_per_node=2 train.py config/train_stockfish.py "$@"
+}
+
 # Process command line arguments
 # First argument is the command, all other arguments are passed to the function
 cmd=$1
@@ -193,8 +218,11 @@ case "$cmd" in
   list)
     list_training
     ;;
+  train_distributed)
+    train_distributed "$@"
+    ;;
   *)
-    echo "Usage: $0 {build|shell|train_lichess|train_stockfish|train_mac|sample|sample_move|prepare_lichess|prepare_stockfish|logs|attach|list} [additional arguments]"
+    echo "Usage: $0 {build|shell|train_lichess|train_stockfish|train_mac|sample|sample_move|prepare_lichess|prepare_stockfish|logs|attach|list|train_distributed} [additional arguments]"
     echo "Examples:"
     echo "  $0 sample --temperature=0.9 --max_new_tokens=100"
     echo "  $0 train_lichess --batch_size=64"

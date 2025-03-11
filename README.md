@@ -1,3 +1,15 @@
+# ChessGPT
+
+## Training Settings
+
+After following the docker setup instructions i.e build image, prepare data, etc. run the following commands to train some models.
+
+Single GPU:
+docker run --gpus all -it --rm -e WANDB_API_KEY=<YOUR_WANDB_API_KEY> -v /home/jordan/ChessGPT/train_ChessGPT:/app chessgpt python train.py config/train_stockfish_medium_12.py
+
+Multi-GPU:
+docker run --gpus all  -it -d --rm -e WANDB_API_KEY=<YOUR_WANDB_API_KEY> -v /home/jordan/ChessGPT/train_ChessGPT:/app chessgpt torchrun --standalone --nproc_per_node=2 train.py config/train_stockfish_large_16.py
+
 # QUICKSTART
 
 ```
