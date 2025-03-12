@@ -39,6 +39,7 @@ eval_iters = 200
 eval_only = False # if True, script exits right after the first eval
 always_save_checkpoint = True # if True, always save a checkpoint after each eval
 init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
+wandb_id = None
 # wandb logging
 wandb_log = False # disabled by default
 wandb_project = 'owt'
@@ -242,8 +243,11 @@ def get_lr(it):
 
 # logging
 if wandb_log and master_process:
-    import wandb
-    wandb.init(project=wandb_project, name=wandb_run_name, config=config)
+    import wandbH
+    if wandb_id is None:
+        wandb.init(project=wandb_project, name=wandb_run_name, config=config)
+    else:
+        wandb.init(project=wandb_project, name=wandb_run_name, config=config, id=wandb_id, resume="must")
 
 # training loop
 X, Y = get_batch('train') # fetch the very first batch
@@ -283,6 +287,12 @@ while True:
                 }
                 print(f"saving checkpoint to {out_dir}")
                 torch.save(checkpoint, os.path.join(out_dir, 'ckpt.pt'))
+                
+                # Save additional checkpoints at specific iterations if configured
+                if 'save_checkpoint_iters' in config and iter_num in config['save_checkpoint_iters']:
+                    iter_checkpoint_path = os.path.join(out_dir, f'ckpt_iter_{iter_num}.pt')
+                    print(f"saving milestone checkpoint to {iter_checkpoint_path}")
+                    torch.save(checkpoint, iter_checkpoint_path)
     if iter_num == 0 and eval_only:
         break
 

@@ -1,5 +1,5 @@
 # ChessGPT-2 85M
-out_dir = "out-stockfish_medium_12"
+out_dir = "out-stockfish-medium-12"
 eval_interval = 4000
 eval_iters = 100
 log_interval = 50
