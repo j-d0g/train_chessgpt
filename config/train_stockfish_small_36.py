@@ -1,6 +1,6 @@
-# ChessGPT-2 228M
-out_dir = "out-stockfish_medium_32"
-eval_interval = 8000
+# ChessGPT-2 100M
+out_dir = "out-stockfish-small-36"
+eval_interval = 4000
 eval_iters = 100
 log_interval = 50
 
@@ -9,16 +9,15 @@ always_save_checkpoint = True
 wandb_log = True
 wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
-wandb_run_name = "stockfish-medium-24"
-
+wandb_run_name = "stockfish-small-36"
 gradient_accumulation_steps = 4
 batch_size = 32
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
 
-# baby GPT model :)
-n_layer = 32
-n_head = 12
-n_embd = 768
+# 16-layer GPT model
+n_layer = 36
+n_head = 8
+n_embd = 512
 dropout = 0.0
 
 learning_rate = 3e-4
