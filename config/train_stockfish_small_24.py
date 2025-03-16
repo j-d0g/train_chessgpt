@@ -10,8 +10,13 @@ wandb_log = True
 wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-small-24"
-gradient_accumulation_steps = 4
-batch_size = 32
+
+# Resume training with existing wandb run
+wandb_id = "5h8d5wyb"  # small-24 wandb ID
+init_from = "resume" if wandb_id else "scratch"
+
+gradient_accumulation_steps = 8
+batch_size = 16
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
 
 # 16-layer GPT model

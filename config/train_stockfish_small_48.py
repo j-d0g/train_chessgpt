@@ -1,4 +1,4 @@
-# ChessGPT-2 100M
+# ChessGPT-2 125M
 out_dir = "out-stockfish-small-48"
 eval_interval = 4000
 eval_iters = 100

@@ -9,6 +9,11 @@ always_save_checkpoint = True
 wandb_log = True
 wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
+
+# Resume training with existing wandb run
+wandb_id = "u82n9rif"  # small-36 wandb ID
+init_from = "resume" if wandb_id else "scratch"
+
 wandb_run_name = "stockfish-small-36"
 gradient_accumulation_steps = 8
 batch_size = 16
