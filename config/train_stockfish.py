@@ -4,7 +4,7 @@ eval_iters = 100
 log_interval = 50
 
 # Explicitly set to resume training from existing checkpoint
-init_from = 'resume'
+init_from = 'scratch'
 
 always_save_checkpoint = True
 

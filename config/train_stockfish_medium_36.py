@@ -1,6 +1,6 @@
 # ChessGPT-2 228M
 out_dir = "out-stockfish-medium-36"
-eval_interval = 8000
+eval_interval = 4000
 eval_iters = 100
 log_interval = 50
 
@@ -10,6 +10,9 @@ wandb_log = True
 wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-medium-36"
+
+wandb_id = "eeab8bdt"
+init_from = "resume" if wandb_id else "scratch"
 
 gradient_accumulation_steps = 2
 batch_size = 64
