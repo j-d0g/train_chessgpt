@@ -1,6 +1,6 @@
 # ChessGPT-2 450M
 out_dir = "out-stockfish-large-36"
-eval_interval = 8000
+eval_interval = 4000
 eval_iters = 100
 log_interval = 50
 always_save_checkpoint = True
