@@ -10,10 +10,10 @@ wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-xxl-36"
 gradient_accumulation_steps = 4
-batch_size = 28
+batch_size = 32
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
 
-# 16-layer GPT model
+# 36-layer GPT model
 n_layer = 36
 n_head = 20
 n_embd = 1600

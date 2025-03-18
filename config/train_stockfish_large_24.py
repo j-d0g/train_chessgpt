@@ -9,6 +9,10 @@ wandb_log = True
 wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-large-24"
+
+wandb_id = "h4fde5ls"
+init_from = "resume" if wandb_id else "scratch"
+
 gradient_accumulation_steps = 2
 batch_size = 64
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
