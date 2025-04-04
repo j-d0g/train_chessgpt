@@ -102,6 +102,35 @@ Attach to a running container:
 ./run_docker.sh attach CONTAINER_NAME
 ```
 
+### 9. Upload Trained Checkpoints to Hugging Face Hub
+
+Upload a trained checkpoint to Hugging Face:
+```bash
+./run_docker.sh upload [checkpoint_path] [model_name] [options]
+```
+
+Example:
+```bash
+./run_docker.sh upload out-stockfish-small-24/ckpt.pt small-24 --repo my-chessgpt
+```
+
+Additional options:
+```bash
+./run_docker.sh upload out/my_model/ckpt.pt my_model --repo my-chess-repo --message "Upload iteration 500"
+```
+
+#### Hugging Face Credentials
+
+The script requires Hugging Face credentials for uploading:
+
+1. Create a Hugging Face access token at https://huggingface.co/settings/tokens
+2. Add your credentials to the parent directory's `.env` file:
+   ```
+   HF_TOKEN=your_huggingface_access_token
+   HF_USERNAME=your_huggingface_username
+   ```
+3. Alternatively, you can set these as environment variables before running the script
+
 ## Configuration
 
 The configuration files are located in the `config/` directory:

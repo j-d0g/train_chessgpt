@@ -1,0 +1,23 @@
+step 352000: train loss 0.3088, val loss 0.3101
+saving checkpoint to out-stockfish-8layer
+iter 352000: loss 0.3113, time 6156.68ms, mfu -100.00%
+iter 352050: loss 0.3074, time 229.17ms, mfu 27.67%
+iter 352100: loss 0.3062, time 228.57ms, mfu 27.67%
+iter 352150: loss 0.3138, time 228.70ms, mfu 27.68%
+iter 352200: loss 0.3109, time 228.83ms, mfu 27.68%
+iter 352250: loss 0.3084, time 228.39ms, mfu 27.69%
+iter 352300: loss 0.3099, time 229.19ms, mfu 27.69%
+iter 352350: loss 0.3013, time 229.32ms, mfu 27.68%
+iter 352400: loss 0.3023, time 229.09ms, mfu 27.68%
+iter 352450: loss 0.3178, time 229.63ms, mfu 27.68%
+iter 352500: loss 0.3107, time 229.57ms, mfu 27.67%
+iter 352550: loss 0.3043, time 229.37ms, mfu 27.67%
+iter 352600: loss 0.3124, time 228.79ms, mfu 27.67%
+iter 352650: loss 0.3116, time 229.62ms, mfu 27.67%
+iter 352700: loss 0.3103, time 228.80ms, mfu 27.67%
+iter 352750: loss 0.3071, time 229.27ms, mfu 27.67%
+iter 352800: loss 0.3085, time 497.50ms, mfu 26.18%
+iter 352850: loss 0.3117, time 489.63ms, mfu 24.85%
+iter 352900: loss 0.3096, time 746.64ms, mfu 23.22%
+iter 352950: loss 0.3047, time 741.85ms, mfu 21.75%
+iter 353000: loss 0.3072, time 746.44ms, mfu 20.42%

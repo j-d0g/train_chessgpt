@@ -1,0 +1,10 @@
+step 0: train loss 3.7575, val loss 3.7569
+iter 0: loss 3.7585, time 28207.06ms, mfu -100.00%
+Traceback (most recent call last):
+  File "/app/train.py", line 309, in <module>
+    scaler.scale(loss).backward()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/opt/conda/lib/python3.10/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 288.00 MiB. GPU 0 has a total capacty of 23.54 GiB of which 182.69 MiB is free. Including non-PyTorch memory, this process has 0 bytes memory in use. Of the allocated memory 22.45 GiB is allocated by PyTorch, and 218.66 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

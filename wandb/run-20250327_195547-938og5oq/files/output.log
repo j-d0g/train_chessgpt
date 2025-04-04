@@ -1,0 +1,15 @@
+step 0: train loss 3.7491, val loss 3.7491
+iter 0: loss 3.7415, time 23665.83ms, mfu -100.00%
+iter 50: loss 2.0387, time 2935.70ms, mfu 30.22%
+iter 100: loss 1.8520, time 2936.11ms, mfu 30.22%
+iter 150: loss 1.6772, time 2935.25ms, mfu 30.22%
+iter 200: loss 1.6090, time 2934.82ms, mfu 30.22%
+iter 250: loss 1.5870, time 2935.73ms, mfu 30.22%
+Traceback (most recent call last):
+  File "/app/train.py", line 322, in <module>
+    scaler.scale(loss).backward()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/opt/conda/lib/python3.10/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,15 @@
+{"time":"2025-03-13T21:56:40.202647354Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250313_215640-np78etao/logs/debug-core.log"}
+{"time":"2025-03-13T21:56:40.30551978Z","level":"INFO","msg":"created new stream","id":"np78etao"}
+{"time":"2025-03-13T21:56:40.305542058Z","level":"INFO","msg":"stream: started","id":"np78etao"}
+{"time":"2025-03-13T21:56:40.305571393Z","level":"INFO","msg":"writer: Do: started","stream_id":"np78etao"}
+{"time":"2025-03-13T21:56:40.30557682Z","level":"INFO","msg":"handler: started","stream_id":"np78etao"}
+{"time":"2025-03-13T21:56:40.305599144Z","level":"INFO","msg":"sender: started","stream_id":"np78etao"}
+{"time":"2025-03-13T21:56:40.582058946Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-13T21:57:45.870306095Z","level":"INFO","msg":"stream: closing","id":"np78etao"}
+{"time":"2025-03-13T21:57:45.870337296Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-13T21:57:45.870869355Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-13T21:57:46.405378927Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-13T21:57:46.601152874Z","level":"INFO","msg":"handler: closed","stream_id":"np78etao"}
+{"time":"2025-03-13T21:57:46.601216772Z","level":"INFO","msg":"sender: closed","stream_id":"np78etao"}
+{"time":"2025-03-13T21:57:46.601213888Z","level":"INFO","msg":"writer: Close: closed","stream_id":"np78etao"}
+{"time":"2025-03-13T21:57:46.601296057Z","level":"INFO","msg":"stream: closed","id":"np78etao"}

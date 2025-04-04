@@ -1,0 +1,16 @@
+step 376000: train loss 0.3068, val loss 0.3083
+saving checkpoint to out-stockfish-8layer
+iter 376000: loss 0.3078, time 5940.77ms, mfu -100.00%
+iter 376050: loss 0.3056, time 229.54ms, mfu 27.62%
+iter 376100: loss 0.3037, time 229.48ms, mfu 27.62%
+iter 376150: loss 0.3119, time 230.50ms, mfu 27.61%
+iter 376200: loss 0.3087, time 230.36ms, mfu 27.60%
+iter 376250: loss 0.3064, time 232.92ms, mfu 27.56%
+Traceback (most recent call last):
+  File "/app/train.py", line 315, in <module>
+    scaler.scale(loss).backward()
+  File "/opt/conda/lib/python3.10/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/opt/conda/lib/python3.10/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt

@@ -1,0 +1,18 @@
+{"time":"2025-03-13T23:31:45.54478063Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250313_233145-x7nnsx8x/logs/debug-core.log"}
+{"time":"2025-03-13T23:31:45.649178202Z","level":"INFO","msg":"created new stream","id":"x7nnsx8x"}
+{"time":"2025-03-13T23:31:45.649229495Z","level":"INFO","msg":"stream: started","id":"x7nnsx8x"}
+{"time":"2025-03-13T23:31:45.649252862Z","level":"INFO","msg":"handler: started","stream_id":"x7nnsx8x"}
+{"time":"2025-03-13T23:31:45.649264982Z","level":"INFO","msg":"sender: started","stream_id":"x7nnsx8x"}
+{"time":"2025-03-13T23:31:45.649253522Z","level":"INFO","msg":"writer: Do: started","stream_id":"x7nnsx8x"}
+{"time":"2025-03-13T23:31:46.078310218Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-03-15T04:59:21.212552642Z","level":"INFO","msg":"api: retrying HTTP error","status":500,"url":"https://api.wandb.ai/files/jd0g-the-university-of-manchester/chess-gpt/x7nnsx8x/file_stream","body":"{\"error\":\"context deadline exceeded\"}"}
+{"time":"2025-03-17T17:52:33.97028143Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)"}
+{"time":"2025-03-17T22:19:19.115149903Z","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/graphql\": context deadline exceeded"}
+{"time":"2025-03-18T06:43:09.6496248Z","level":"INFO","msg":"stream: closing","id":"x7nnsx8x"}
+{"time":"2025-03-18T06:43:09.649648703Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-03-18T06:43:09.650171985Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-03-18T06:43:10.610859365Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-03-18T06:43:10.777576061Z","level":"INFO","msg":"handler: closed","stream_id":"x7nnsx8x"}
+{"time":"2025-03-18T06:43:10.777625728Z","level":"INFO","msg":"writer: Close: closed","stream_id":"x7nnsx8x"}
+{"time":"2025-03-18T06:43:10.777651735Z","level":"INFO","msg":"sender: closed","stream_id":"x7nnsx8x"}
+{"time":"2025-03-18T06:43:10.77769595Z","level":"INFO","msg":"stream: closed","id":"x7nnsx8x"}

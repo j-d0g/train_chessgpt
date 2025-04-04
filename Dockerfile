@@ -4,7 +4,7 @@ FROM pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
 WORKDIR /app
 
 # Install required packages
-RUN pip install numpy transformers datasets tiktoken wandb tqdm
+RUN pip install numpy transformers datasets tiktoken wandb tqdm huggingface_hub python-dotenv
 
 # Copy the ChessGPT repository into the container
 COPY . /app/

@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/app/train.py", line 267, in <module>
+    losses = estimate_loss()
+  File "/opt/conda/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/app/train.py", line 224, in estimate_loss
+    logits, loss = model(X, Y)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/app/model.py", line 177, in forward
+    tok_emb = self.transformer.wte(idx) # token embeddings of shape (b, t, n_embd)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 162, in forward
+    return F.embedding(
+  File "/opt/conda/lib/python3.10/site-packages/torch/nn/functional.py", line 2233, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+KeyboardInterrupt

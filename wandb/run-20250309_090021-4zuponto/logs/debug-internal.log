@@ -1,0 +1,7 @@
+{"time":"2025-03-09T09:00:21.83254902Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250309_090021-4zuponto/logs/debug-core.log"}
+{"time":"2025-03-09T09:00:21.937917429Z","level":"INFO","msg":"created new stream","id":"4zuponto"}
+{"time":"2025-03-09T09:00:21.937938274Z","level":"INFO","msg":"stream: started","id":"4zuponto"}
+{"time":"2025-03-09T09:00:21.938002247Z","level":"INFO","msg":"sender: started","stream_id":"4zuponto"}
+{"time":"2025-03-09T09:00:21.937993364Z","level":"INFO","msg":"writer: Do: started","stream_id":"4zuponto"}
+{"time":"2025-03-09T09:00:21.9380542Z","level":"INFO","msg":"handler: started","stream_id":"4zuponto"}
+{"time":"2025-03-09T09:00:22.138038831Z","level":"INFO","msg":"Starting system monitor"}

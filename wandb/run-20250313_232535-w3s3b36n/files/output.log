@@ -1,0 +1,4 @@
+step 376000: train loss 0.3068, val loss 0.3083
+saving checkpoint to out-stockfish-small-8
+iter 376000: loss 0.2897, time 11816.46ms, mfu -100.00%
+iter 376050: loss 0.2953, time 651.57ms, mfu 12.97%
