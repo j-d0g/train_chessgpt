@@ -1,5 +1,5 @@
 # ChessGPT-2 75M
-out_dir = "out-stockfish-small-24-128"
+out_dir = "out-stockfish-small-24"
 eval_interval = 4000
 eval_iters = 100
 log_interval = 50
@@ -12,7 +12,7 @@ dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-small-24"
 
 # Resume training with existing wandb run
-# wandb_id = "5h8d5wyb"  # small-24 wandb ID
+wandb_id = None
 init_from = "resume" if wandb_id else "scratch"
 
 gradient_accumulation_steps = 1

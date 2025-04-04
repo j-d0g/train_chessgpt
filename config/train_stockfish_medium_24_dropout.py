@@ -11,8 +11,8 @@ wandb_project = "chess-gpt"
 dataset = "hf_dataset_stockfish"
 wandb_run_name = "stockfish-medium-24-dropout"
 
-gradient_accumulation_steps = 8
-batch_size = 16
+gradient_accumulation_steps = 4
+batch_size = 32
 block_size = 1023  # context of up to 1023 tokens (because dataset block size is 1024)
 
 # baby GPT model :)
