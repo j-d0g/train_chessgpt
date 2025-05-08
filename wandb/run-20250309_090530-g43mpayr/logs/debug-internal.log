@@ -1,7 +1,0 @@
-{"time":"2025-03-09T09:05:30.900111185Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250309_090530-g43mpayr/logs/debug-core.log"}
-{"time":"2025-03-09T09:05:31.007922627Z","level":"INFO","msg":"created new stream","id":"g43mpayr"}
-{"time":"2025-03-09T09:05:31.007955184Z","level":"INFO","msg":"stream: started","id":"g43mpayr"}
-{"time":"2025-03-09T09:05:31.008006422Z","level":"INFO","msg":"writer: Do: started","stream_id":"g43mpayr"}
-{"time":"2025-03-09T09:05:31.008017844Z","level":"INFO","msg":"sender: started","stream_id":"g43mpayr"}
-{"time":"2025-03-09T09:05:31.008091877Z","level":"INFO","msg":"handler: started","stream_id":"g43mpayr"}
-{"time":"2025-03-09T09:05:31.21424818Z","level":"INFO","msg":"Starting system monitor"}

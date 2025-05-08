@@ -1,7 +1,0 @@
-step 352000: train loss 0.3088, val loss 0.3101
-saving checkpoint to out-stockfish-8layer
-iter 352000: loss 0.3113, time 11785.31ms, mfu -100.00%
-iter 352050: loss 0.3073, time 490.75ms, mfu 12.92%
-iter 352100: loss 0.3060, time 738.63ms, mfu 12.49%
-iter 352150: loss 0.3138, time 735.57ms, mfu 12.10%
-iter 352200: loss 0.3109, time 489.64ms, mfu 12.18%

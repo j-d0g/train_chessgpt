@@ -1,7 +1,0 @@
-{"time":"2025-03-09T01:33:21.727118377Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250309_013321-tjehry3d/logs/debug-core.log"}
-{"time":"2025-03-09T01:33:21.832900952Z","level":"INFO","msg":"created new stream","id":"tjehry3d"}
-{"time":"2025-03-09T01:33:21.832920605Z","level":"INFO","msg":"stream: started","id":"tjehry3d"}
-{"time":"2025-03-09T01:33:21.832953124Z","level":"INFO","msg":"writer: Do: started","stream_id":"tjehry3d"}
-{"time":"2025-03-09T01:33:21.832996346Z","level":"INFO","msg":"sender: started","stream_id":"tjehry3d"}
-{"time":"2025-03-09T01:33:21.833038686Z","level":"INFO","msg":"handler: started","stream_id":"tjehry3d"}
-{"time":"2025-03-09T01:33:22.082651776Z","level":"INFO","msg":"Starting system monitor"}

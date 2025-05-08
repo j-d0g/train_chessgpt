@@ -1,7 +1,0 @@
-{"time":"2025-03-09T00:16:39.492021039Z","level":"INFO","msg":"stream: starting","core version":"0.19.8","symlink path":"/app/wandb/run-20250309_001639-rh8g972i/logs/debug-core.log"}
-{"time":"2025-03-09T00:16:39.597334751Z","level":"INFO","msg":"created new stream","id":"rh8g972i"}
-{"time":"2025-03-09T00:16:39.59736124Z","level":"INFO","msg":"stream: started","id":"rh8g972i"}
-{"time":"2025-03-09T00:16:39.597381436Z","level":"INFO","msg":"writer: Do: started","stream_id":"rh8g972i"}
-{"time":"2025-03-09T00:16:39.597408742Z","level":"INFO","msg":"handler: started","stream_id":"rh8g972i"}
-{"time":"2025-03-09T00:16:39.597718232Z","level":"INFO","msg":"sender: started","stream_id":"rh8g972i"}
-{"time":"2025-03-09T00:16:39.824718552Z","level":"INFO","msg":"Starting system monitor"}
