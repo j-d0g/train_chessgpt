@@ -34,7 +34,7 @@ def upload_checkpoint(checkpoint_path, model_name, repo_name="chessgpt", commit_
     # Create repo name with username prefix if needed
     if "/" not in repo_name:
         # Use environment variable for username or default to a placeholder
-        username = os.environ.get("HF_USERNAME", "your-username")
+        username = os.environ.get("HF_USERNAME", "jd0g")
         full_repo_name = f"{username}/{repo_name}"
     else:
         full_repo_name = repo_name
